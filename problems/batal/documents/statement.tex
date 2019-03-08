@@ -1,0 +1,25 @@
+Bibika está jogando o famoso jogo Navalha Batal. Para quem não o conhece, o jogo é basicamente jogado entre duas pessoas onde cada uma possui um tabuleiro de tamanho NxN com algumas peças (que representam Navios) de tamanhos 1xT e Tx1 previamente inseridas, onde o valor de T pode ser qualquer número natural positivo. Vale ressaltar que não se pode sobrepor peças e toda peça deve estar totalmente inserida no tabuleiro, não podendo ter parte(s) para fora. 
+
+Após posicionarem suas peças iniciais, cada jogador tem alguns minutos para analisar o tabuleiro do adversário e devem calcular (ou chutar) a quantidade de peças 1xT e Tx1 que ainda podem ser inseridas. Ganha quem chegar mais perto da resposta.
+
+// Coloco uma imagem de um tabuleiro pequeno e mostro quantas possibilidades de peças existem pra serem colocadas, para deixar totalmente claro 
+
+Após jogar com tabuleiro de tamanho consideravelmente pequeno, Bibika gostaria de saber as respostas para tabuleiros maiores. Como é impossível a olho nu, ela dará as posições dos navios inicias e cabe a você ajudá-la!
+
+\section*{Entrada}
+
+A primeira linha contém dois inteiros $N$ e $Q$, sendo $NxN$ o tamanho do tabuleiro e $Q$ a quantidade de células que estão previamente preenchidas com navios.
+As próximas $Q$ linhas possuem dois inteiros, $X_i$ e $Y_i$, indicando que a coordenada $X_i, Y_i$ do tabuleiro está preenchida.
+
+\section*{Saída}
+
+Exiba um único inteiro, a quantidade de navios de tamanho $1xT$ ou $Tx1$ que são possíveis de serem colocados, dado que fiquem totalmente inseridas no tabuleiros e não exista sobreposição com outros navios. Como a quantidade pode ser muito grande, exiba módulo $10^9+7$.
+
+\section*{Restrições}
+
+$1 \leq N \leq 10^6$
+$0 \leq Q \leq 2x10^5$
+$1 \leq X, Y \leq N$
+
+\section*{Exemplos}
+\exemplo

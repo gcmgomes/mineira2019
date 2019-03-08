@@ -1,0 +1,4 @@
+A minha solução é basicamente criar uma lista de adjacência para cada linha/coluna e então ordená-las. Após isso, percorre todas as a listas (a soma dos elementos delas será no máximo 2xQ) e faz o cálculo usando a diferença entre cada par de valores de cada lista. Essa diferença representa uma sub-matriz de tamanho 1xT e para saber quantas peças diferentes (desde 1x1 até 1xT) consigo colocar nessa matriz, basta fazer (T*(T+1))/2.
+Como uma peça 1x2 é diferente de uma 2x1, deve-se tomar cuidado para não contar as peças de tamanho 1x1 duas vezes, dependendo de como a implementação for feita.
+
+A complexidade seria algo perto de A(logA), sendo A = 2*Q, pela ordenação.

@@ -1,2 +1,2 @@
 # mineira2019
-Problemas, enunciados, e soluções para a Maratona Mineira de Programação de 2019
+Problemas para a Maratona Mineira 2019.

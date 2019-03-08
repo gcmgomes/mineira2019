@@ -1,0 +1,24 @@
+Luciana é a mais nova estagiária numa empresa que desenvolve cabos para comunicação de equipamentos industriais. Para sua primeira tarefa, sua gerente lhe deu dois conectores A e  B, com N pinos em cada. Alguns pinos de A estão ligados a pinos de B por fios (possivelmente todos ou nenhum). A tarefa de Luciana é ligar os demais pinos de A a pinos de B de forma que cada pino de A esteja ligado a um pino distinto de B.
+
+Infelizmente as coisas não são tão simples quanto Luciana gostaria. Cada fio pode transmitir um bit (0 ou 1). Toda vez que um fio cruza com outro, o valor do bit é invertido. Isto é, o 0 se torna 1 e o 1 se torna 0. É claro que ninguém vai ficar feliz se os bits enviados pelo conector A não chegarem corretamente ao conector B. Por isso, Luciana deve fazer as ligações restantes de forma a garantir que tudo corra bem.
+
+Apesar de estar se formando em Engenharia da Computação, Luciana gosta mais de Matemática. Logo, ela ficou interessada no número de maneiras distintas de terminar as ligações. Como ela está muita ocupada no estágio, a tarefa de calcular esse número ficou para você!
+
+Considere que os pinos de A são pontos distintos na reta x = 0 e os de B são pontos distintos na reta x = 1. Um fio ligando dois pinos é uma segmento de reta.
+
+\section*{Entrada}
+
+A primeira linha da entrada contém dois inteiros $N$ e $M$, o número de pinos e o número de conexões entre os pinos de $A$ e $B$, respectivamente.
+Seguem $M$ linhas, cada uma contendo dois inteiros $a_i$ e $b_i$, indicando que o pino $a_i$ de $A$ está conectado ao pino $b_i$ de $B$.
+
+\section*{Saída}
+
+Escreva na saída $N$ linhas. A linha $i$ deve conter um único $b_i$, indicando que o $i$-ésimo pino de $A$ está conectado ao pino $b_i$ de $B$.
+ 
+\section*{Restrições}
+
+$$1 \leq N \leq 10^{6}$$
+$$0 \leq M \leq 10^6$$
+
+\section*{Exemplos}
+\exemplo

@@ -1,0 +1,15 @@
+O problema apresenta um grafo $G(V, E)$ onde todos os vértices $v \in V$ são os participantes, e
+as arestas $e(v_i, v_j)$ $\forall$ $v_i, v_j \in V$ representam que a pessoa $v_i$ sorteou a pessoa $v_j$. 
+É garantido que
+os vértices do grafo tem grau de entrada e saída igual a 1 ($g_e(v) = g_s(v) = 1$), porque cada pessoa 
+tira apenas uma outra e é tirada apenas uma vez. É garantido também que não existem loops no grafo 
+(uma pessoa não tira a si próprio no Amigo Oculto). Resumindo: o grafo $G$ do Amigo Oculto é um grafo de
+ciclos.
+
+Seja $v_i$ o mentiroso, e $v_j$ a pessoa que o mentiroso sorteou e $v_k$ a pessoa que o mentiroso diz
+ter sorteado. O mentiroso então remove de $G$ a aresta $e(v_i, v_j)$ e adiciona a aresta $e(v_i, v_k)$ 
+tal que $g_e(v_j) = 0$ e $g_e(v_k) = 2$. Assim, para novamente corrigir o grafo e manter a propriedade
+$g_e(v) = g_s(v) = 1$, temos que deslocar umas das duas arestas que incidem em $v_k$ para $v_j$. Logo,
+os únicos possíveis mentirosos são sempre os dois que dizem ter tirado a mesma pessoa. Exceto quando
+o outro vértice de entrada de $v_k$ é o próprio $v_j$ ou quando $v_i$ é $v_k$, então o mentiroso é 
+garantido ser somente $v_i$.

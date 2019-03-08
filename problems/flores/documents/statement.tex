@@ -1,0 +1,55 @@
+Damiko precisa fazer uma pesquisa sobre T diferentes tipos de flores para a escola. Para isso ele irá usar o jardim existente em sua casa. Como é preguiçoso, ele não quer ter que procurar por muito tempo e portanto ele necessita de sua ajuda para encontrar a menor área quadrada que contém todos os tipos de flores (1 a T inclusive). 
+Sua tarefa é simples, Damiko irá fornecer um mapa do seu jardim no formato de uma matriz NxM onde, em cada posição, há um valor inteiro representando os tipos de flores no local. Cada um desses valores inteiros é uma máscara onde cada bit ativo representa um tipo de flor existente.
+Portanto se uma posição do jardim contém, por exemplo, o valor 5, isso significa que existem dois tipos de flores: o tipo 1 e o tipo 3. Caso o valor seja 7 ele contém os tipos:  1, 2 e 3. Caso seja 0, não existem flores no local.
+Segue um exemplo de mapa 3x4 de um jardim com T=5 tipos de flores:
+
+0 1 9 3
+2 1 0*  8*
+3 0 7*  20*
+
+
+No exemplo do jardim acima a menor região que contém os 5 tipos diferentes de flores é a de área 4 destacada* iniciando na posição (1, 2) e finalizando na posição (2, 3).
+
+\section*{Entrada}
+
+Na primeira linha serão fornecidos as dimensões $N$ e $M$ do jardim e a quantidade $T$ de tipos de flores a serem pesquisadas por Damiko. Nas $N$ linhas seguintes serão fornecidos $M$ valores $X_{ij}$ que representam os tipos de flores em cada posição do jardim.
+
+\section*{Saída}
+
+Mostre qual a menor área quadrada que Damiko deverá analisar para encontrar todos os tipos de flores de 1 a $T$ e sua coordenada superior esquerda. Caso exista mais de uma resposta possível, exiba a com menor linha. Caso ainda exista mais de uma possível resposta, exiba a com menor coluna. Caso não seja possível encontrar todos os tipos de flores, exiba apenas o valor -1.
+
+\section*{Restrições}
+
+$$1 \leq N,M \leq 500$$
+$$1 \leq T \leq 10$$
+$$0 \leq X_ij \leq 1024$$
+
+\section*{Exemplos}
+Entrada 1:
+3 4 5
+0 1 9 3
+2 1 0 8
+3 0 7 20
+
+Saída 1:
+4
+1 2
+
+Entrada 2:
+2 2 1
+2 4
+6 0
+
+Saída 2:
+-1
+
+Entrada 3:
+2 3 1
+4 2 3
+2 3 1
+
+Saída 3:
+1
+0 2
+
+\exemplo

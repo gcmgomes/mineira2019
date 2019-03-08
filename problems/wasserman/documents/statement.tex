@@ -1,0 +1,113 @@
+Em sua última visita a Furnas, Wasserman o Rei das Águas, ficou bastante confuso com o 
+dialeto mineirês que os peixes falavam. Bagri, o peixe poliglota, foi convocado para ajudar 
+Wasserman a entender esse novo idioma. Bagri passou muitos anos estudando o dialeto, e 
+conhecia todas as palavras e frases mais comuns do Peixe-mineirês de Furnas. Fez então uma 
+lista com todas elas e a deu à Wasserman. Aqui podemos ver um trecho desta lista:
+
+\begin{align*}
+blohblo:& \text{ aos competidores}\\
+bloh:& \text{ ajuda}\\
+blobla:& \text{ aos artistas da}\\
+ubl:& \text{ Peça}\\
+blaubl:& \text{ da Maratona Mineira}\\
+\end{align*}
+
+Então Bagri advertiu:
+- Sempre espere um peixe terminar sua frase, pois nem sempre uma palavra é o que parece!
+No peixe-mineirês quando há mais do que uma possível tradução, o correto é aquela em que 
+as primeiras palavras são as maiores possíveis!
+
+Wasserman, confuso, perguntou:
+- Quem poderá me ajudar a traduzir tal idioma?
+
+Bagri, em peixe-mineirês, respondeu:
+- ublblohbloblaubl
+
+Wasserman pensou, pensou, pensou até que disse:
+- A tradução para isso é \textit{Peça ajuda aos artistas da Peça} ? Que Peça?
+
+Bagri lamentando-se, disse:
+- Você está ficando velho Wasserman, não está entendendo muita coisa. Você traduziu como:
+
+\begin{align*}
+ubl + bloh + blobla + ubl: \text{Peça} + \text{ajuda} + \text{aos artistas da} + \text{Peça}
+\end{align*}
+
+- Porém o correto é:
+
+\begin{align*}
+ubl + blohblo + blaubl: \text{Peça} + \text{aos competidores} + \text{da Maratona Mineira}
+\end{align*}
+
+- Pois em ambas traduções a primeira palavra tem o mesmo tamanho, porém na segunda tradução, a segunda
+palavra \textit{blohblo} é maior do que a segunda palavra da primeira tradução \textit{bloh}. Logo o
+correto é \textit{Peça aos competidores da Maratona Mineira}!!!
+
+Wasserman então pediu para que você faça um programa que traduza o peixe-mineirês.
+
+\section*{Entrada}
+
+A entrada contém um número inteiro $N$, seguido de $2*N$ linhas com traduções de palavras
+do peixe-mineirês, no seguinte formato: na linha $i$ contém uma palavra $n_i$ (com apenas letras
+minúsculas) de peixe-mineirês e a linha abaixo ($i+1$) contém uma ou mais palavras $t_i$ correspondentes 
+a tradução (letras maiusculas e minusculas, sem acentuação), $\forall i \in N$. Por último, uma 
+sentença $S$ com apenas letras minúsculas do peixe-mineirês é dado. 
+
+\section*{Saída}
+
+Escreva a tradução, acrescentando um espaço estre as palavras traduzidas.
+
+\section*{Restrições}
+
+$1 \le N \le 50000$
+
+$1 \le |n_i| \le 100$
+
+$1 \le |t_i| \le 1000$
+
+$1 \le |S| \le 10000000$ 
+
+É garantido que toda sentença $S$ tem tradução.
+
+\Example
+
+\begin{example}
+\exmp{
+5
+blohblo  
+aos competidores
+bloh 
+ajuda
+blobla
+aos artistas da
+ubl
+Peca
+blaubl
+da Maratona Mineira
+ublblohbloblaubl
+}{
+Peca aos competidores da Maratona Mineira
+}%
+\end{example}
+
+\begin{example}
+\exmp{
+6
+a
+a
+ab
+ave
+blu
+peixe
+blua
+tubarao
+lu
+voa
+luaa
+mar
+abluluab
+}{
+ave voa voa ave
+}%
+\end{example}
+

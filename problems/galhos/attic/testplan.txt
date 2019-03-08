@@ -1,0 +1,55 @@
+# This is a sample test plan
+# the first column specifies the test group
+# the second column specifies the command to be executed
+
+# Use samples as tests
+1     ; copy documents/sample-1.in
+1     ; copy documents/sample-2.in
+1     ; copy documents/sample-3.in
+
+# Use generators
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+2     ; gen_random.exe 100 30
+
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 100000000 100000
+
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 1000000000000 200000

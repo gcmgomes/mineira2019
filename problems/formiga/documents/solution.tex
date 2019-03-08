@@ -1,0 +1,7 @@
+Podemos calcular facilmente quantos segundos a formiga leva para subir e descer o brinquedo uma vez. Para subir, há $2^(K + 1)$ segmentos subindo e $2^(K + 1)$ segmentos horizontais. Portanto, ela leva $2^(K + 2) + 2^(K + 1) = 3 * 2^(K+1)$ segundos para subir. Para descer, ela leva $2^K + 2^(K + 1) = 3 * 2^K$. Para subir e descer, portanto, ela leva $9 * 2^K$ segundos. Podemos primeiro reduzir n módulo este número sem alterar a solução.
+
+Depois, podemos calcular se a formiga estará subindo ou descendo facilmente. Se $N <= 3 * 2^(K + 1)$, ela estará subindo no segundo $N$. Caso contrário, está descendo. Vamos assumir que ela está subindo; a solução para a formiga descendo é similar.
+
+Se ela está subindo, podemos facilmente calcular se ela está na primeira ou na segunda metade do trajeto. Se ela está na primeira metade, ela está percorrendo um brinquedo de ordem $K - 1$. Basta chamarmos recursivamente então a nossa solução com uma ordem a menos no brinquedo. Se ela está na segunda metade, ela também está em uma parte de ordem $K - 1$. Também resolvemos recursivamente, subtraindo o tempo que ela demora para percorrer a primeira metade, mas temos que adicionar um deslocamento em $x$ e em $y$ na resposta para considerar que ela está na segunda metade.
+
+Com isso, o custo da solução fica $O(K)$.

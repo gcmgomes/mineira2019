@@ -1,0 +1,17 @@
+Seja $dp$ a representação dos sufixos de $S$ tal que $dp(i) = -1$ é equivalente a dizer que
+o sufixo $S_{i:}$ não tem tradução, enquanto que para $dp(i) \ge 0$ existe tradução, e a primeira palavra
+da tradução termina em $dp(i)$, ou seja, $S_{i:dp(i)} \in N$ onde $N$ é o dicionário das traduções.
+
+Uma vez computado $dp$, basta seguir os ponteiros a partir de $dp(0)$ e imprimir as traduções.
+Para computar $dp$:
+
+\begin{align*}
+    dp(|S|) = |S|\\
+    dp(i) = \left\{\begin{array}{@{}r}
+        \max(j \text{ }\forall n_j \in N \text{ tal que } n_j = S_{i:j} \text{ e } dp(j) \ge 0)\\ 
+        -1 \text{ caso contrário}
+     \end{array}\right.
+\end{align*}
+
+Mesmo usando hashes, computar essa DP usando a forma acima tem custo de $O(|S||N|)$. Porém, podemos
+resolver usando uma variação do Aho-Corasick, em $O(|S| + |N||n_i|)$.

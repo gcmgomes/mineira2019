@@ -1,0 +1,48 @@
+Todo fim de ano, Marcos vai para furnas comemorar o Natal junto com seus amigos.
+Eles tem a tradição de sempre jogar \textit{Amigo Oculto} (também conhecido como 
+\textit{Amigo Secreto}) nas vésperas de natal. Para quem não sabe, Amigo Oculto
+é uma brincadeira na qual é sorteado para cada participante um outro participante
+o qual ele deve dar um presente. 
+
+Os amigos de Marcos inovaram e esse ano irão fazer uma surpresa para ele. Eles decidiram
+que um deles irá mentir sobre quem sorteou. Marcos não participará do sorteio mas
+deverá descobrir \textit{quem é o mentiroso}! Se Marcos acertar ele ficará com os
+presentes de todos eles. Se errar deverá dar um presente para cada um! 
+
+Com muito medo de errar, Marcos pediu para que fizesse um programa que dado quem
+cada participante diz ter tirado, diga quem é o mentiroso. Se isso não for possível,
+diga quais participantes podem estar mentindo, pois afinal, qualquer dica será
+muito preciosa para Marcos!
+
+\section*{Entrada}
+
+A entrada contém um número inteiro $N$ que representa o número de pessoas que estão
+participando do Amigo Oculto. As próximas $N$ linhas contém dois nomes, $a_i$ e $b_i$,
+representando que a pessoa $a_i$ sorteou a pessoa $b_i$.
+
+\section*{Saída}
+
+Um número $M \le N$ que representa o número de possíveis mentirosos. As próximas $M$ linhas
+contém o nome deles em ordem alfábetica.
+
+\section*{Restrições}
+
+$2 \le N \le 100000$
+
+Nomes contém apenas letras minúsculas. 
+
+\section*{Exemplos}
+
+\begin{example}
+\exmp{
+4
+papa paulo
+nicao renan
+renan paulo
+paulo papa
+}{
+2
+papa
+renan
+}%
+\end{example}
