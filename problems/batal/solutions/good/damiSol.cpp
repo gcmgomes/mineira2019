@@ -46,7 +46,7 @@ int main(){
 	for(int i=1; i<=2*N; i++){
 		int sz = lista[i].size();
 		if(!sz){
-			ans += calc(N);
+			ans = (ans + calc(N)) % mod;
 			continue;
 		}
 		int last = 0;
