@@ -1,0 +1,25 @@
+Seja $G$ o grafo correspondente às alianças entre as capivaras.
+Se $G$ possui algum vértice de grau um, coloque ele de um lado e os demais do outro.
+Se isso não ocorre, seja $C$ um ciclo de $G$, que pode ser encontrado em tempo linear
+com uma busca em profundidade.
+Vamos agora encontrar um ciclo menor que intersecta $C$ um caminho de $C$. Isso ocorre
+quando existe algum vertice em $G \setminus C$ com dois vizinhos em $C$.
+Como $G$ tem grau máximo três, cada vértice de $C$ possui, no máximo, um vizinho fora de $C$.
+Ou seja, encontrar um $v$ com $d_C(v) \geq 2$ pode ser feito em tempo linear.
+Ainda mais, $v$ define dois novos cíclos, sendo que um deles tem, no máximo, metade dos vértices de $C$.
+Repetindo esse processo, temos 3 casos:
+\begin{enumerate}
+  \item Não há mais nenhum $v$ com dois vizinhos em $C$. Isso implica que a partição $(C, G \setminus C)$ é
+  uma solução para o problema.
+  \item Existe $v$ e $|C| = 4$. Esse caso gera uma bipartido completo $K_{2,3}$ que é indivisível, que chamamos de $Q$.
+  Agora, note que os vertices  do lado de tamanho três desse bipartido são os únicos com algum vizinho fora do bipartido.
+  Se $Q = G$, responda não.
+  Se nenhum $v$  fora de $Q$ tem 2 vizinhos, $(Q, G \setminus Q)$ é uma partição válida.
+  Se não, defina $Q = Q \cup \{v\}$ e repita a análise. Porém, essa repetição só pode ser feita mais duas vezes,
+  pois, quando o número de vertices de $Q$ com grau dois em $Q$ for um, é impossível não poder particionar o grafo em
+  $(Q, G \setminus Q)$.
+  \item Existe $v$ e $|C| = 3$. Fazemos uma análise idêntica ao caso do bipartido completo, porém agora temos que o triâgulo como base.
+\end{enumerate}
+
+A obesrvação crucial é que a operação de redução dos cíclos é bastante eficiente, pois, a cada iteração, reduzimos em pelo menos metade
+o número de vértices que temos de verificar. A complexidade final é, portante, $\mathcal{O}(n \log n)$.

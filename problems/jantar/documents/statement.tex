@@ -1,0 +1,43 @@
+Há vários anos, Bacon -- o Bravo -- saiu vitorioso das disputas de sucessão do reino das capivaras.
+Infelizmente, Bacon já está com 16 anos, uma idade avançada para uma capivara.
+Como todo bom rei absolutista, Bacon -- o Bravo -- também gostaria de ser conhecido como fundador
+da maior dinastia já vista por sua espécie, e almeja colocar no trono sua filha mais velha,
+Bacon -- a Ambiciosa.
+
+Para evitar um novo conflito entre seus vassalos, o monarca convocou todos os nobres de seu reino
+para um jantar onde será decidido o futuro rei das capivaras, onde os convidados serão dispostos em uma
+grande mesa retangular com a família real ocupando as duas cabeceiras.
+Para deixar os nobres mais confortáveis, e assim aumentar suas chances de realizar seus sonhos,
+Bacon -- o Bravo -- quer dividir as nobres capivaras nas duas laterais da mesa tal que cada uma capivara tenha,
+no máximo, um de seus aliádos políticos do outro lado.
+Infelizmente, ou felizmente para nosso monarca, as richas entre os nobres ainda estão muito fortes e evidentes,
+e com isso cada nobre tem não mais do que três aliados.
+
+Ajude o rei a determinar se é possível ou não dividir os nobres dessa forma e seja imortalizado nas 
+\textit{Crônicas das Capivaras} como Humana/Humano -- a/o Ajudante!
+
+\section*{Entrada}
+
+A primeira linha da entrada contém dois inteiros separados por espaços, $N$ e $M$, o número de nobres e o número
+de aliaças políticas existentes entre eles.
+Seguem $M$ linhas, cada uma com dois inteiros $u_i$ e $v_i$, indicando que a capivara $u_i$ aliada à capivara $v_i$.
+
+\section*{Saída}
+
+Na primeira linha da saída escreva um único inteiro $R$, que deve ser $0$ caso seja impossível realizar a divisão,
+ou $1$, casa seja possível.
+Se $R = 0$, não há mais linhas na entrada.
+Se $R = 1$, a segunda linha começa com um único inteiro $S_1$, o número de capivaras do lado esquerdo da mesa.
+Seguem então $S_1$ inteiros nessa linha, cada um representando o número de uma capivara que está do lado esquerdo.
+A terceira linha começa com um único inteiro $S_2$, o número de capivaras do lado direito da mesa.
+Seguem então $S_2$ inteiros nessa linha, cada um representando o número de uma capivara que está do lado direito.
+
+
+\section*{Restrições}
+
+$$2 \leq N \leq 10^{6}$$
+$$1 \leq M \leq \frac{3N}{2}$$
+$$1 \leq u_i, v_i \leq N$$
+
+\section*{Exemplos}
+\exemplo
