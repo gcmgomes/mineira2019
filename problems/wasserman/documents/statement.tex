@@ -48,9 +48,9 @@ Wasserman então pediu para que você faça um programa que traduza o peixe-mine
 \section*{Entrada}
 
 A entrada contém um número inteiro $N$, seguido de $2*N$ linhas com traduções de palavras
-do peixe-mineirês, no seguinte formato: na linha $i$ contém uma palavra $n_i$ (com apenas letras
-minúsculas) de peixe-mineirês e a linha abaixo ($i+1$) contém uma ou mais palavras $t_i$ correspondentes 
-a tradução (letras maiusculas e minusculas, sem acentuação), $\forall i \in N$. Por último, uma 
+do peixe-mineirês, no seguinte formato: na linha $i$ contém uma palavra $n_i$ de peixe-mineirês 
+e a linha abaixo ($i+1$) contém uma ou mais palavras $t_i$ correspondentes 
+a tradução, $\forall i \in N$. Por último, uma 
 sentença $S$ com apenas letras minúsculas do peixe-mineirês é dado. 
 
 \section*{Saída}
@@ -61,53 +61,15 @@ Escreva a tradução, acrescentando um espaço estre as palavras traduzidas.
 
 $1 \le N \le 50000$
 
-$1 \le |n_i| \le 100$
+$1 \le |n_i| \le 50$
 
-$1 \le |t_i| \le 1000$
+$1 \le |t_i| \le 100$
 
-$1 \le |S| \le 10000000$ 
+$1 \le |S| \le 1000000$ 
 
-É garantido que toda sentença $S$ tem tradução.
+É garantido que toda sentença $S$ tem tradução. É também garantido
+que toda palavra de peixe-mineirês tem apenas uma tradução.
+Toda string na entrada contém apenas caracteres da tabela ASCII.
 
-\Example
-
-\begin{example}
-\exmp{
-5
-blohblo  
-aos competidores
-bloh 
-ajuda
-blobla
-aos artistas da
-ubl
-Peca
-blaubl
-da Maratona Mineira
-ublblohbloblaubl
-}{
-Peca aos competidores da Maratona Mineira
-}%
-\end{example}
-
-\begin{example}
-\exmp{
-6
-a
-a
-ab
-ave
-blu
-peixe
-blua
-tubarao
-lu
-voa
-luaa
-mar
-abluluab
-}{
-ave voa voa ave
-}%
-\end{example}
+\exemplo
 
