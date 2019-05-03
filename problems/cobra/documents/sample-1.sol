@@ -1,1 +1,9 @@
-10
+Caso 1: 1
+Caso 2: 3
+Caso 3: 6
+Caso 4: 9
+Caso 5: 15
+Caso 6: 51
+Caso 7: 201
+Caso 8: 451
+Caso 9: 1251
