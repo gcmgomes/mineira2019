@@ -1,18 +1,21 @@
+// Solucao do problema "Cobra de Dominos"
+// Andre Rodrigues da Cruz (dacruz@cefetmg.br)
+// Maratona Mineira de Programacao 2019
+
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
 int main()
 {
-    long n, i = 1;
+    long n;
+    int i = 1;
 
     while(true)
     {
         cin >> n;
         if(n == 0) break;
-        n = (pow(-1, n)*(2-n) + 2 + n + 2*pow(n, 2))/4;
-        cout << "Caso " << i++ << ": " << n << endl;
+        cout << "Caso " << i++ << ": " << ((n%2 ? -1 : 1)*(2-n) + 2 + n + 2*n*n)/4 << endl;
     }
 
     return 0;
