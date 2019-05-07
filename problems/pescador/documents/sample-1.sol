@@ -1,1 +1,10 @@
-10
+Peixe 1: 50
+Peixe 2: 100
+Peixe 3: 150
+Peixe 4: 200
+Peixe 5: 250
+Peixe 6: 300
+Peixe 7: 350
+Peixe 8: 400
+Peixe 9: 450
+Peixe 10: 500
