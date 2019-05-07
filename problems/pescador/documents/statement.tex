@@ -4,7 +4,7 @@ Senhor Figueiredo é um pescador famoso nos botecos da cidade de Lavras por caus
 
 \section*{Entrada}
 
-A primeira linha da entrada é composta pelos inteiros $M$ (1 <= M <= 100) e N (2 <= N <= 1000), que representam, respectivamente, a quantidade de espécies pescadas e o fator usado pelo senhor Figueiredo nas histórias. Na segunda linha há M inteiros Q_i (1 <= i <=  M) separados por espaço, que representam a quantidade real de peixes pescados por cada espécie.
+A primeira linha da entrada é composta pelos inteiros $M$ e $N$, que representam, respectivamente, a quantidade de espécies pescadas e o fator usado pelo senhor Figueiredo nas histórias. Na segunda linha há $M$ inteiros $Q_i$, $i \in \{1, \ldots, M\}$, separados por espaço, que representam a quantidade real de peixes pescados por cada espécie.
 
 \section*{Saída}
 
@@ -12,9 +12,9 @@ A saída apresenta em cada linha o valor mentiroso para cada espécie no formato
 
 \section*{Restrições}
 
-$$2 \leq N \leq 1000$$
 $$1 \leq M \leq 100$$
-$$1 \leq Q_i \leq M$$
+$$2 \leq N \leq 1000$$
+$$1 \leq Q_i \leq 100$$
 
 
 \section*{Exemplos}
@@ -29,5 +29,29 @@ Saída
 Peixe 1: 20
 Peixe 2: 100
 Peixe 3: 50
+
+
+Entrada
+
+4 100
+1 2 3 4
+
+Saída
+
+Peixe 1: 100
+Peixe 2: 200
+Peixe 3: 300
+Peixe 4: 300
+
+
+Entrada
+
+2 2
+2 2
+
+Saída
+
+Peixe 1: 4
+Peixe 2: 4
 
 \exemplo
