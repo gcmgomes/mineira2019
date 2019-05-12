@@ -3,13 +3,30 @@
 # Sample test generator
 
 import sys,os,string
-from random import seed, randint, sample
+from random import seed, randint, sample, shuffle
 
 # first argument must be seed
 seed(sys.argv[1])
 max_n = int(sys.argv[2])
-max_m = int(sys.argv[3])
 
 n = randint(1, max_n)
-m = randint(1, max_m)
-print("{} {}".format(n, m))
+
+hs, es, vat = list(range(n)), [], {}
+shuffle(hs)
+
+for i, h in enumerate(hs):
+    vat[h] = i
+
+for i in range(n):
+    if hs[i] == 0:
+        es.append(-1)
+    else:
+        es.append(1 + vat[randint(0, hs[i] - 1)])
+
+print(n)
+print(" ".join(map(str, es)))
+
+b = list(range(1, n+1))
+shuffle(b)
+
+print(" ".join(map(str, b)))

@@ -1,15 +1,44 @@
-É dada uma árvore, e uma sequência de $N- 1$ vértices que se desprendem do pai e caem da árvore. O $i$-ésimo vértice da sequência cai da árvore no momento $i$, juntamente com toda a sua subárvore (fora os vértices que já caíram antes). Para todos os vértices, em que momento eles caem?
+O natal já passou. Porém, por causa da correria do dia-a-dia, a árvore de natal na casa de Graça continua montada.
+Mas a família dessa garota-prodígio decidiu fazer um mutirão no próximo fim de semana para desmontar a árvore,
+onde também ainda está a toca do coelhinho da páscoa.
 
-É dada o número $N$: o tamanho da árvore. Seguem n-1 inteiros. O i-ésimo inteiro é o pai do vértice de número i + 1. O vértice 0 é a raiz da árvore. Seguem, então, n inteiros, com a ordem em que os vértices se desprendem do seu pai na árvore. A saída deve conter n inteiros. Para cada vértice i, deve-se imprimir em que momento o vértice i cai da árvore.
+Como Ada, a mãe de Graça, é uma cientista da computação apaixonada pelo que faz,
+ela nunca perde uma oportunidade de introduzir a filha
+no fabuloso mundo dos algoritmos e estruturas de dados.
+Por isso, a árvore de natal da familia foi realmente montada como uma árvore
+que você encontraria em um curso de algoritmos: ela possui bolas numeradas de $1$ a $N$, cada uma
+podendo ser vista como um vértice, pendurada a outra bola acima dela,
+com exceção da raiz que foi pendurada no teto.
+
+Para que o desmonte da árvore seja mais divertido, Graça propôs um desafio a Ada.
+No $i$-ésimo segundo do desmonte, a mãe irá cortar, o fio que originalmente mantinha a bola de número $B_i$ suspensa.
+Caso a bola ainda esteja suspensa, ela irá então cair ao chão, juntamente com todas as bolas que estavam
+penduradas nela direta ou indiretamente.
+Pode acontecer que Graça corte o fio de uma bola que já esteja no chão - neste caso, nada acontece.
+Passados $N$ segundos, com todas as bolas no chão, Graça pergunta a Ada em qual segundo cada uma das $N$
+bolas caiu. Caso Ada acerte todos os números, ela será recompensada com uma viagem para assistir a próxima
+edição da Maratona Mineira, onde ela poderá conhecer outras jovens mentes promissoras como a sua!
+
+Ada é muito ágil e conseguiu anotar todos os números necessários manualmente. Mas será que você
+consegue fazer um programa para ajudá-la a se preparar para o desmonte de árvore de natal do ano que vem?
+Considere que as bolas caem imediatamente ao chão quando deixam de estar presas direta ou indiretamente ao teto.
 
 \section*{Entrada}
 
-A primeira linha da entrada contém dois inteiros $N$, o número de vértices da árvore.
-A segunda linha contém $N-1$ inteiros separados por espaço, indicando os momentos em que cada um do vértices
+A primeira linha da entrada contém um inteiro $N$, o número de bolas da árvore de natal.
+A segunda linha contém $N$ inteiros $P_1, \cdots, P_n$ separados por espaço.
+$P_i$ indica que há um fio prendendo a bola $i$ à bola $P_i$, que está acima na árvore.
+$P_i = -1$ indica que a bola $i$ é a raiz da árvore. Há sempre exatamente uma bola $i$ com 
+$P_i = -1$, e é garantido que não haverá ciclos nas ligações descritas.
+A última linha contém $N$ inteiros $B_1, \cdots, B_N$ separados por espaço, indicando qual fio é
+cortado no $i$-ésimo segundo do processo de desmonte.
+Cada inteiro entre $1$ e $N$ aparece exatamente uma vez na última linha da entrada.
 
 \section*{Saída}
 
-Escreva na saída $N-1$ inteiros. O $i$-ésimo desses inteiros deve indicar em qual momento o vértice $i$ cai da árvore.
+Escreva na saída uma linha com $N$ inteiros separados por espaço.
+O $i$-ésimo desses inteiros deve indicar em qual segundo a bola $i$ cai ao chão.
+
 \section*{Restrições}
 
 $$1 \leq N \leq 10^{6}$$
