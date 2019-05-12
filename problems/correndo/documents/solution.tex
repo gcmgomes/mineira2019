@@ -1,7 +1,7 @@
 É fácil ver que a solução ótima pode sempre caminhar entre pontos que estão na extremidade do círculo maior
 (dá para transformar qualquer solução numa desse tipo sem aumentar o número de lados). Além disso, o ótimo é
 fazer com que cada troca de direção tenha o maior ângulo possível. Basta calcular esse ângulo e pegar o teto
-da divisão de 360 por ele, subtraindo um (o problema pede o número de trocas de direção durante a corrida).
+da divisão de 2*PI por ele.
 Para calcular o ângulo, basta desenhar no papel as duas circunferências, centradas no ponto O, e de raios
 $a$ e $b$. Sejam $P_1$ e $P_2$ dois pontos sobre a circunferência de raio $b$, de tal forma que o segmento
 $P1 - P2$ tangencie a circunferência de raio $a$ (assim o arco $P1 - P2$ é o maior possível) num ponto que
@@ -9,4 +9,4 @@ chamamos de $S$. Observe o triângulo $OSP1$. Ele é retângulo, e um cateto tem
 tamanho $b$. O seno do ângulo $OP1S$ é $a / b$. Com isso, calculamos o ângulo com a função arco seno. Com isso,
 é fácil chegar à resposta. Calculamos o outro ângulo agudo do triângulo, e multiplicando por 2 temos o tamanho do
 arco $P1 - P2$. Basta agora pegar o teto da divisão de $2*\pi$ por esse arco para termos o número de lados do
-polígono que José irá percorrer. Subtraindo 1, temos a resposta do problema.
+polígono que José irá percorrer.
