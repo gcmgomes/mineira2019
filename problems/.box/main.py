@@ -337,6 +337,13 @@ def solutions(name,sol_groups=["good","slow","wrong"]):
         for sol_fn in glob('%s/solutions/slow/*.*exe' % name):
             yield sol_fn, 'TLE'
 
+def get_comparator(name):
+    path = "%s/attic/comparator.exe" % name
+    if os.path.isfile(path):
+        return path
+    else:
+        return None
+
 def box_check_solutions(name, sol_groups, do_time=False, do_sample=False):
     u"Check all solutions for problem `name`."
     global short_mode
@@ -354,6 +361,7 @@ def box_check_solutions(name, sol_groups, do_time=False, do_sample=False):
         return t;
 
     def run_check(name,sol_group,ctime_limit=100,jtime_limit=100,ptime_limit=100):
+        comparator_fn = get_comparator(name)
         for sol_fn, expected in solutions(name,sol_group):
             cur_cgood_solutions_time,cur_jgood_solutions_time,cur_pgood_solutions_time=[],[],[]  
             cur_cgood_solutions_totaltime,cur_jgood_solutions_totaltime,cur_pgood_solutions_totaltime=[],[],[]  
@@ -373,7 +381,7 @@ def box_check_solutions(name, sol_groups, do_time=False, do_sample=False):
 
                 result = run_solution(sol_fn, input_fn,
                                   reference_fn = change_extension(input_fn, 'sol'),
-                                  time_limit=time_limit,mem_limit=mem_limit,file_limit=file_limit)
+                                  time_limit=time_limit,mem_limit=mem_limit,file_limit=file_limit, comparator_fn = comparator_fn)
                 if result.status == 'RE':
                     ui.end_task(exec_msg, ERROR, short)
                     #ui.end_task(result.detail, ERROR, short)
@@ -429,6 +437,7 @@ def box_check_solutions(name, sol_groups, do_time=False, do_sample=False):
     file_limit = 1024
 
     if do_sample:
+        comparator_fn = get_comparator(name)
         for sol_fn, expected in solutions(name,"good"):
             solution_language=check_solution_language(sol_fn)
             ui.task_header(name, 'Testing %s [%s,%s] on sample input...' % (os.path.basename(sol_fn), "good", solution_language))
@@ -444,7 +453,7 @@ def box_check_solutions(name, sol_groups, do_time=False, do_sample=False):
                     time_limit=ctime_limit
                 result = run_solution(sol_fn, input_fn,
                                   reference_fn = change_extension(input_fn, 'sol'), 
-                                  time_limit=time_limit,mem_limit=mem_limit,file_limit=file_limit)
+                                  time_limit=time_limit,mem_limit=mem_limit,file_limit=file_limit, comparator_fn = comparator_fn)
                 if result.status == 'RE':
                     #ui.end_task(exec_msg, ERROR, short)
                     ui.end_task(result.detail, ERROR, short)
