@@ -74,43 +74,39 @@ void BruteForce(vector<vector<int>>& graph) {
   cout << "0" << endl;
 }
 
-void CycleDFS(vector<vector<int>>& graph, vector<int>& cycle,
-              vector<int>& cycle_pos, vector<int>& parent) {
-  int n = graph.size();
-  stack<int> st;
-  st.push(0);
-  parent[0] = -2;
-  while (st.size()) {
-    int u = st.top();
-    st.pop();
-    for (auto x : graph[u]) {
-      if (x == parent[u]) {
-        continue;
-      }
-      if (parent[x] == -1) {
-        parent[x] = u;
-        st.push(x);
-      } else {
-        cycle.push_back(x);
-        cycle_pos[x] = 1;
-        int v = u;
-        u = parent[parent[x]];
-        do {
-          cycle.push_back(v);
-          cycle_pos[v] = cycle.size();
-          v = parent[v];
-        } while (v != u);
-        parent.assign(n, -1);
-        int i = 0;
-        parent[cycle[0]] = cycle.back();
-        while(i < cycle.size())  {
-          parent[cycle[(i+1) % n]] = cycle[i];
-          i++;
-        }
-        return;
-      }
+int IncreaseMonochrome(vector<vector<int>>& graph, vector<int>& cycle,
+                       vector<int>& is_in_cycle) {
+  int i = 0, n = graph.size();
+  while (i < n) {
+    while (is_in_cycle[i]) {
+      i++;
     }
+    int c = 0;
+    for (auto x : graph[i]) {
+      c += is_in_cycle[x] != 0;
+    }
+    if (c > 1) {
+      cycle.push_back(i);
+      is_in_cycle[i] = 1;
+      return 1;
+    }
+    i++;
   }
+  return 0;
+}
+
+void FindDegreeOne(vector<vector<int>>& graph) {
+  int n = graph.size();
+  int i = 0;
+  while (i < n) {
+    if (graph[i].size() == 1) {
+      break;
+    }
+    i++;
+  }
+  vector<int> cycle(1, i), is_in_cycle(n, 0);
+  is_in_cycle[i] = 1;
+  PrintGood(n, cycle, is_in_cycle);
 }
 
 int ShortenCycle(vector<vector<int>>& graph, vector<int>& cycle,
@@ -171,40 +167,74 @@ int ShortenCycle(vector<vector<int>>& graph, vector<int>& cycle,
   return shorter;
 }
 
-int IncreaseMonochrome(vector<vector<int>>& graph, vector<int>& cycle,
-                       vector<int>& is_in_cycle) {
-
-  int i = 0, n = graph.size();
-  while(i < n) {
-    while(is_in_cycle[i]) {
-      i++;
+int Dist(vector<vector<int>>& graph, int s, int t, vector<int>& cycle,
+         vector<int>& cycle_pos, vector<int>& parent) {
+  int n = graph.size();
+  cycle.clear();
+  cycle_pos = parent = vector<int>(n);
+  queue<int> st;
+  parent[s] = -2;
+  for(auto x : graph[s]) {
+    if(x != t) {
+      parent[x] = s;
+      st.push(x);
     }
-    int c = 0;
-    for(auto x : graph[i]) {
-      c += is_in_cycle[x] != 0;
-    }
-    if(c > 1) {
-      cycle.push_back(i);
-      is_in_cycle[i] = 1;
-      return 1;
-    }
-    i++;
   }
-  return 0;
+  while (st.size()) {
+    int u = st.front();
+    st.pop();
+    for (auto x : graph[u]) {
+      if (x == parent[u]) {
+        continue;
+      }
+      if (parent[x] == -1) {
+        parent[x] = u;
+        st.push(x);
+      } else if (x == t) {
+        cycle.push_back(x);
+        cycle_pos[x] = 1;
+        int v = u;
+        u = parent[parent[x]];
+        do {
+          cycle.push_back(v);
+          cycle_pos[v] = cycle.size();
+          v = parent[v];
+        } while (v != u);
+        parent.assign(n, -1);
+        int i = 0;
+        parent[cycle[0]] = cycle.back();
+        while (i < cycle.size()) {
+          parent[cycle[(i + 1) % n]] = cycle[i];
+          i++;
+        }
+        return cycle_pos[s];
+      }
+    }
+  }
+  return INF;
 }
 
-void FindDegreeOne(vector<vector<int>>& graph) {
-  int n = graph.size();
+int Girth(vector<vector<int>>& graph, vector<int>& cycle, vector<int>& cycle_pos,
+              vector<int>& parent) {
   int i = 0;
-  while(i < n) {
-    if(graph[i].size() == 1) {
-      break;
+  int girth = INF, s = -1, t = -1;
+  while (i < graph.size()) {
+    for (auto& j : graph[i]) {
+      if (i < j) {
+        int d = Dist(graph, i, j, cycle, cycle_pos, parent);
+        if (d < girth) {
+          girth = d;
+          s = i;
+          t = j;
+        }
+      }
     }
     i++;
   }
-  vector<int> cycle(1, i), is_in_cycle(n, 0);
-  is_in_cycle[i] = 1;
-  PrintGood(n, cycle, is_in_cycle);
+  if(s == -1) {
+    return INF;
+  }
+  return Dist(graph, s, t, cycle, cycle_pos, parent);
 }
 
 int main() {
@@ -226,8 +256,7 @@ int main() {
     return 0;
   }
   vector<int> cycle, cycle_pos(n), parent(n, -1);
-  CycleDFS(graph, cycle, cycle_pos, parent);
-  if (cycle.empty()) {
+  if(Girth(graph, cycle, cycle_pos, parent) == INF) {
     FindDegreeOne(graph);
     return 0;
   }
