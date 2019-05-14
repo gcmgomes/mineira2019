@@ -25,7 +25,7 @@
 2     ; gen_random.exe 1 1 0
 2     ; gen_random.exe 4 4 6 
 2     ; gen_random.exe 6 6 5 
-2     ; gen_random.exe 13 13 6
+2     ; gen_random.exe 3 3 6
 2     ; gen_random.exe 8 2 10
 2     ; gen_random.exe 4 3 10
 2     ; gen_random.exe 5 8 9
@@ -49,19 +49,15 @@
 
 # Large random
 4     ; gen_random.exe 499 499 10
-4     ; gen_random.exe 470 380 8
-4     ; gen_random.exe 390 350 7
 4     ; gen_random.exe 300 304 0
 4     ; gen_random.exe 320 379 6
 4     ; gen_random.exe 500 480 5
 4     ; gen_random.exe 439 496 3
-4     ; gen_random.exe 498 498 10
 4     ; gen_random.exe 400 400 2
 4     ; gen_random.exe 350 350 1
 4     ; gen_random.exe 500 500 9
 4     ; gen_random.exe 500 500 8
 4     ; gen_random.exe 500 500 7
-4     ; gen_random.exe 500 500 6
 
 # Small fixed
 5     ; gen_fixed.exe 1 1 1 0
@@ -77,12 +73,9 @@
 6     ; gen_fixed.exe 500 500 10 0
 6     ; gen_fixed.exe 500 500 10 1
 6     ; gen_fixed.exe 500 500 10 2
-6     ; gen_fixed.exe 500 500 10 3
 6     ; gen_fixed.exe 490 500 9 0
 6     ; gen_fixed.exe 500 490 9 1
-6     ; gen_fixed.exe 490 500 9 2
 6     ; gen_fixed.exe 500 490 9 3
 6     ; gen_fixed.exe 499 499 1 0
 6     ; gen_fixed.exe 499 499 2 1
 6     ; gen_fixed.exe 499 499 3 2
-6     ; gen_fixed.exe 499 499 4 3
