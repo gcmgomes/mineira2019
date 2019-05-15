@@ -20,7 +20,8 @@ def run_solution(sol_fn, input_fn,
                  reference_fn = None,
                  time_limit = 20,
                  mem_limit = 1024,
-                 file_limit = 1024):
+                 file_limit = 1024,
+                 comparator_fn = None):
     if reference_fn is None:
         if output_fn is None:
             output_fn = '/dev/null'
@@ -63,12 +64,21 @@ def run_solution(sol_fn, input_fn,
             hints.give_hint('solution-SIGABRT')
             result.detail = 'SIGABRT'
     elif reference_fn:
-        if subprocess.call(['diff', reference_fn, output_fn],
-                           stdout = NamedTemporaryFile(),
-                           stderr = NamedTemporaryFile()) == 0:
-            result.status = 'AC'
+        if comparator_fn:
+            devnull = open(os.devnull, 'w')
+            returncode = subprocess.call([comparator_fn, output_fn, reference_fn, input_fn], stdout = devnull, stderr = devnull)
+            devnull.close()
+            if returncode == 4:
+                result.status = 'AC'
+            else:
+                result.status = 'WA'
         else:
-            result.status = 'WA'
+            if subprocess.call(['diff', reference_fn, output_fn],
+                               stdout = NamedTemporaryFile(),
+                               stderr = NamedTemporaryFile()) == 0:
+                result.status = 'AC'
+            else:
+                result.status = 'WA'
     else:
         result.status = 'OK'
 

@@ -7,12 +7,12 @@
 1     ; copy documents/sample-2.in
 
 # Big tests
-2     ; copy attic/bigs/0.txt
-2     ; copy attic/bigs/1.txt
-2     ; copy attic/bigs/2.txt
-2     ; copy attic/bigs/3.txt
-2     ; copy attic/bigs/4.txt
-2     ; copy attic/bigs/5.txt
-2     ; copy attic/bigs/6.txt
-2     ; copy attic/bigs/7.txt
-2     ; copy attic/bigs/8.txt
+#2     ; copy attic/bigs/0.txt
+#2     ; copy attic/bigs/1.txt
+#2     ; copy attic/bigs/2.txt
+#2     ; copy attic/bigs/3.txt
+#2     ; copy attic/bigs/4.txt
+#2     ; copy attic/bigs/5.txt
+#2     ; copy attic/bigs/6.txt
+#2     ; copy attic/bigs/7.txt
+#2     ; copy attic/bigs/8.txt
