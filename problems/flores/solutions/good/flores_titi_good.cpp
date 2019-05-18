@@ -9,8 +9,8 @@ typedef long long int ll;
 typedef long double ld;
 
 int n, m, t;
-int M[501][501];
-int MM[10][501][501];
+int M[1001][1001];
+int MM[10][1001][1001];
 
 inline bool valid(int i, int j) {
   if(i < 0 || j < 0) return false;
