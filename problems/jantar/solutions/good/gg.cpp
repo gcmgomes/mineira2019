@@ -104,7 +104,8 @@ void CycleDFS(vector<vector<int>>& graph, vector<int>& cycle,
         int i = 0;
         parent[cycle[0]] = cycle.back();
         while(i < cycle.size())  {
-          parent[cycle[(i+1) % n]] = cycle[i];
+          int pos = cycle[(i+1) % cycle.size()];
+          parent[pos] = cycle[i];
           i++;
         }
         return;
