@@ -7,9 +7,10 @@ from random import seed, randint, sample
 
 # first argument must be seed
 seed(sys.argv[1])
-max_n = int(sys.argv[2])
-max_m = int(sys.argv[3])
+max_k = int(sys.argv[2])
+max_n = int(sys.argv[3])
 
-n = randint(1, max_n)
-m = randint(1, max_m)
-print("{} {}".format(n, m))
+k = randint(0, max_k)
+n = randint(0, max_n)
+
+print("{} {}".format(k, n))
