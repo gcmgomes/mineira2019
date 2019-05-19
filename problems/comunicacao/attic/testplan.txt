@@ -6,50 +6,64 @@
 1     ; copy documents/sample-1.in
 1     ; copy documents/sample-2.in
 1     ; copy documents/sample-3.in
+1     ; copy documents/sample-4.in
 
-# Use generators
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
+# Random small cases in which it is always possible to build a valid connection
+2     ; random.exe  1 0
+2     ; random.exe  1 1
+2     ; random.exe  2 1
+2     ; random.exe  3 1
+2     ; random.exe  3 2
+2     ; random.exe  3 3
+2     ; random.exe  4 1
+2     ; random.exe  4 3
+2     ; random.exe  10 0
+2     ; random.exe  10 1
+2     ; random.exe  10 2
+2     ; random.exe  10 3
+2     ; random.exe  10 4
+2     ; random.exe  10 5
+2     ; random.exe  10 6
+2     ; random.exe  10 7
+2     ; random.exe  10 8
+2     ; random.exe  10 9
+2     ; random.exe  10 10
 
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
+# Random large cases in which it is always possible to build a valid connection
+3     ; random.exe  1000000 10
+3     ; random.exe  1000000 10
+3     ; random.exe  1000000 10
+3     ; random.exe  1000000 10
+3     ; random.exe  1000000 100
+3     ; random.exe  1000000 100
+3     ; random.exe  1000000 100
+3     ; random.exe  1000000 100
+3     ; random.exe  1000000 100
+3     ; random.exe  1000000 100
+3     ; random.exe  1000000 100
+3     ; random.exe  1000000 1000
+3     ; random.exe  1000000 1000
+3     ; random.exe  1000000 1000
+3     ; random.exe  1000000 1000
+3     ; random.exe  1000000 1000
+3     ; random.exe  1000000 1000
+3     ; random.exe  1000000 1000
+3     ; random.exe  1000000 1000
+3     ; random.exe  1000000 1000
+3     ; random.exe  1000000 10000
+3     ; random.exe  1000000 100000
+3     ; random.exe  1000000 1000000
 
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
+# Random tests with bad connections (even connected to odd) (Impossible to satisfy bit value constraints)
+4     ; random.exe  4 1 1 0
+4     ; random.exe  1000 100 1 0
+4     ; random.exe  1000 100 1 0
+4     ; random.exe  1000 100 1 0
+4     ; random.exe  100000 10000 1 0
+
+# Random tests with one port connected to multiple ones (Impossible to satisfy the permuation constraint)
+5     ; random.exe  4 1 0 1
+5     ; random.exe  1000 100 0 1
+5     ; random.exe  1000 100 0 1
+5     ; random.exe  1000 100 0 1
+5     ; random.exe  100000 10000 0 1

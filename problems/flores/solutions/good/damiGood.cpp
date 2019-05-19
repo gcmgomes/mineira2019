@@ -21,8 +21,8 @@ typedef long long ll;
 typedef pair < int, int >  ii;
 
 int N, M, T;
-int m[501][501];
-int s[501][501][10];
+int m[1001][1001];
+int s[1001][1001][10];
 
 bool kesimoBit(int x, int k){
 	return x & (1 << k);

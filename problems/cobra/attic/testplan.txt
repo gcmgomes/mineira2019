@@ -8,48 +8,22 @@
 1     ; copy documents/sample-3.in
 
 # Use generators
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
-2     ; gen_random.exe 100 30
+2     ; gen_fixed.exe 1 100
+2     ; gen_fixed.exe 4900 5000
+2     ; gen_fixed.exe 1000 1157
 
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
-3     ; gen_random.exe 100000000 100000
+3     ; gen_random.exe 11 10
+3     ; gen_random.exe 12 20
+3     ; gen_random.exe 5 5000
+3     ; gen_random.exe 55 1000
+3     ; gen_random.exe 100 4400
+3     ; gen_random.exe 2500 1120
 
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
-4     ; gen_random.exe 1000000000000 200000
+4     ; gen_random.exe 100 1000
+4     ; gen_random.exe 100 2000
+4     ; gen_random.exe 100 3000
+4     ; gen_random.exe 100 4000
+4     ; gen_random.exe 100 5000
+4     ; gen_random.exe 1000 5000
+4     ; gen_random.exe 1000 5000
+4     ; gen_random.exe 1000 5000

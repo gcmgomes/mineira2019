@@ -21,7 +21,6 @@ typedef long long ll;
 typedef pair < int, int >  ii;
 
 const int MAXN = 1000010;
-const int mod = 1000000007;
 
 vector<int> lista[2*MAXN];
 
@@ -46,7 +45,7 @@ int main(){
 	for(int i=1; i<=2*N; i++){
 		int sz = lista[i].size();
 		if(!sz){
-			ans = (ans + calc(N)) % mod;
+			ans = ans + calc(N);
 			continue;
 		}
 		int last = 0;
@@ -54,13 +53,13 @@ int main(){
 		for(int j=0; j<sz; j++){
 			int curr = lista[i][j];
 			ll blockSize = curr-last-1;
-			ans = (ans + calc(blockSize)) % mod;
+			ans = ans + calc(blockSize);
 			last = curr;
 		}
-		ans = (ans + calc(N-last)) % mod;
+		ans = ans + calc(N-last);
 	}
 	
-	int emptyCells = N*N-Q; 
+	ll emptyCells = ll(N)*N-Q; 
 	cout << ans-emptyCells << "\n";
 	
 }
