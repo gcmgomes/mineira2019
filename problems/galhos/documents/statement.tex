@@ -10,26 +10,28 @@ que você encontraria em um curso de algoritmos: ela possui bolas numeradas de $
 podendo ser vista como um vértice, pendurada a outra bola acima dela,
 com exceção da raiz que foi pendurada no teto.
 
-Para que o desmonte da árvore seja mais divertido, Graça propôs um desafio a Ada.
-No $i$-ésimo segundo do desmonte, a mãe irá cortar, o fio que originalmente mantinha a bola de número $B_i$ suspensa.
+Para que o desmonte da árvore seja mais divertido, Ada propôs um desafio a Graça.
+No $i$-ésimo segundo do desmonte, Ada irá cortar o fio que originalmente mantinha a bola de número $B_i$ suspensa.
 Caso a bola ainda esteja suspensa, ela irá então cair ao chão, juntamente com todas as bolas que estavam
 penduradas nela direta ou indiretamente.
-Pode acontecer que Graça corte o fio de uma bola que já esteja no chão - neste caso, nada acontece.
-Passados $N$ segundos, com todas as bolas no chão, Graça pergunta a Ada em qual segundo cada uma das $N$
-bolas caiu. Caso Ada acerte todos os números, ela será recompensada com uma viagem para assistir a próxima
+Pode acontecer que Ada corte o fio de uma bola que já esteja no chão - neste caso, nada acontece.
+Passados $N$ segundos, com todas as bolas no chão, Ada pergunta a Graça em qual segundo cada uma das $N$
+bolas caiu.
+Caso Graça acerte todos os números, ela será recompensada com uma viagem para assistir a próxima
 edição da Maratona Mineira, onde ela poderá conhecer outras jovens mentes promissoras como a sua!
 
-Ada é muito ágil e conseguiu anotar todos os números necessários manualmente. Mas será que você
+Graça é muito ágil e conseguiu anotar todos os números necessários manualmente. Mas será que você
 consegue fazer um programa para ajudá-la a se preparar para o desmonte de árvore de natal do ano que vem?
 Considere que as bolas caem imediatamente ao chão quando deixam de estar presas direta ou indiretamente ao teto.
 
 \section*{Entrada}
 
 A primeira linha da entrada contém um inteiro $N$, o número de bolas da árvore de natal.
-A segunda linha contém $N$ inteiros $P_1, \cdots, P_n$ separados por espaço.
+A segunda linha contém $N$ inteiros $P_1, \cdots, P_N$ separados por espaço.
 $P_i$ indica que há um fio prendendo a bola $i$ à bola $P_i$, que está acima na árvore.
-$P_i = -1$ indica que a bola $i$ é a raiz da árvore. Há sempre exatamente uma bola $i$ com 
-$P_i = -1$, e é garantido que não haverá ciclos nas ligações descritas.
+$P_i = -1$ indica que a bola $i$ é a raiz da árvore.
+Há sempre exatamente uma bola $i$ com 
+$P_i = -1$, e é garantido que as ligações dadas descrevem uma árvore.
 A última linha contém $N$ inteiros $B_1, \cdots, B_N$ separados por espaço, indicando qual fio é
 cortado no $i$-ésimo segundo do processo de desmonte.
 Cada inteiro entre $1$ e $N$ aparece exatamente uma vez na última linha da entrada.
