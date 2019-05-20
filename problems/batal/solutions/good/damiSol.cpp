@@ -1,4 +1,8 @@
-#include <bits/stdc++.h>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <cstdlib>
+#include <cstdio>
     
 #define INF 0x3F3F3F3F
 #define DINF 1e+12

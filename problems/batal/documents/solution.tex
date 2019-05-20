@@ -1,8 +1,11 @@
-A minha solução é basicamente criar uma "lista de adjacência" para cada linha/coluna com base nas Q coordenadas de entrada e então ordená-las. Após isso, percorre todas as a listas (a soma dos elementos delas será no máximo 2 x Q) e descobre todos os intervalos entre duas peças consecutivas. Como a lista estará ordenada, para descobrir o tamanho de cada intervalo basta fazer lista[atual][i]-lista[atual][i-1] para todo i de 1 até o tamanho da lista[atual]. Para descobrir a quantidade de peças que é possível colocar em um intervalo de tamanho X, basta fazer o somatório de [1, X], podendo ser calculado em tempo constante com a fórmula
-(X*(X+1))/2. Acumule todas essas quantidades tirando módulo 10^9+7 e exiba como resposta.
+A minha solução é basicamente criar uma "lista de adjacência" para cada linha/coluna com base nas $Q$ coordenadas de entrada e então ordená-las.
+Após isso, percorre todas as listas (a soma dos elementos delas será no máximo $2Q$) e descobre todos os intervalos entre duas peças consecutivas.
+Como a lista estará ordenada, para descobrir o tamanho de cada intervalo basta fazer \texttt{lista[atual][i]-lista[atual][i-1]} para todo i de 1 até o tamanho da \texttt{lista[atual]}.
+Para descobrir a quantidade de peças que é possível colocar em um intervalo de tamanho $X$, basta fazer o somatório de $[1, X]$, podendo ser calculado em tempo constante com a fórmula
+$(X*(X+1))/2$. Acumule todas essas quantidades tirando módulo $10^9+7$ e exiba como resposta.
 
 Atentar para não contar peças de tamanho 1x1 duas vezes.
 Atentar para não esquecer de contar os intervalos entre as bordas e a primeira peça.
 
 
-A complexidade, por conta da ordenação, é A(logA), sendo A = 2*Q.
+A complexidade, por conta da ordenação, é $A \log A$, sendo $A = 2Q$.

@@ -1,22 +1,25 @@
-Bibika está jogando o famoso jogo Navalha Batal. Para quem não conhece, o jogo é basicamente jogado entre duas pessoas onde existe um tabuleiro de tamanho NxN com algumas peças (que representam Bavios) de tamanhos 1xT e Tx1 previamente inseridas, onde o valor de T é inteiro positivo menor ou igual a N. Vale ressaltar que a sobreposição de peças não é possível.
+Bibika está jogando o famoso jogo Navalha Batal.
+Para quem não conhece, o jogo é disputado entre duas pessoas e um tabuleiro comum, de tamanho $N \times N$, com algumas peças (que representam Bavios) de tamanhos $1 \times T$ e $T \times 1$ previamente inseridas, onde o valor de $T$ é inteiro positivo menor ou igual a $N$.
+A sobreposição de peças não é possível!
 
-Após posicionarem suas peças iniciais, cada jogador tem alguns minutos para analisar o tabuleiro e então devem calcular (ou chutar) a quantidade de peças 1xT e Tx1 que ainda podem ser inseridas de forma independente. \newline
+Após a posição das peças iniciais ser revelada, cada jogador tem alguns minutos para analisar o tabuleiro e calcular (ou chutar) a quantidade de peças $1 \times T$, $T \times 1$ diferentes que ainda podem ser inseridas no tabuleiro.
+Duas peças são diferentes se os espaços que elas ocupam no tabuleiro são diferentes.
 
-Segue um exemplo de um tabuleiro 3x3 com 4 posições [(1,2), (2,3), (3,1) e (3,2)] previalmente preenchidas pelos jogadores.
+Segue um exemplo de um tabuleiro $3 \times 3$ com as posições $\left\{(1,2), (2,3), (3,1), (3,2)\right\}$ previamente preenchidas.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.7]{\CWD/tab_inicial.png}
 \end{figure}
 
-Nesse caso ainda é possível inserir nas células vazias 7 peças de tamanhos 1xT ou Tx1, todas ilustradas abaixo:
+Nesse caso ainda é possível inserir nas células vazias 7 peças diferentes, como ilustrado abaixo:
 
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.6]{\CWD/pecas.png}
 \end{figure}
 
-Após jogarem com um tabuleiro de tamanho consideravelmente pequeno, Bibika gostaria de saber a resposta para tabuleiros maiores. Como é uma tarefa bastante complexa a olho nu, cabe a você ajudá-la!
+Após jogarem com um tabuleiro bem pequeno, Bibika gostaria de saber, dado um tabuleiro gigante e uma configuração inicial do tabuleiro, qual solução do jogo. Como é uma tarefa bastante complexa a olho nu, cabe a você ajudá-la!
 
 \section*{Entrada}
 
@@ -25,7 +28,7 @@ As próximas $Q$ linhas possuem dois inteiros, $X_i$ e $Y_i$, indicando que a co
 
 \section*{Saída}
 
-Exiba um único inteiro, a quantidade de bavios de tamanho $1xT$ ou $Tx1$ que ainda são possíveis de serem colocados de forma que fiquem totalmente inseridos no tabuleiro e não exista sobreposição com outros bavios.
+Exiba um único inteiro, a quantidade de bavios de tamanho $1 \times T$ ou $T \times 1$ que ainda são possíveis de serem colocados de forma que fiquem totalmente inseridos no tabuleiro e não exista sobreposição com outros bavios.
 
 \section*{Restrições}
 
