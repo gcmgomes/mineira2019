@@ -1,14 +1,19 @@
-História de Pescador.
-
-Senhor Figueiredo é um pescador famoso nos botecos da cidade de Lavras por causa das histórias duvidosas que ele conta sobre as aventuras dele no Rio Grande. Certa vez o jovem Ceconelli, vizinho do senhor Figueiredo, resolveu investigar a veracidade dos causos. De forma insistente, Ceconelli pediu ao senhor Figueiredo que o acompanhasse nas aventuras pesqueiras. Para evitar a fadiga semanal, o senhor Figueiredo deixou que o jovem o acompanhasse, desde que carregasse os mantimentos e a vara dele. Durante a pesca, Ceconelli acabou descobrindo o segredo do senhor Figueiredo sobre as histórias de pescador em relação a quantidade de peixes pescados. Ele percebeu que nas histórias, o senhor Figueiredo multiplica a quantia fisgada por um fator fixo. Visando ficar também popular na cidade, Ceconelli quer contribuir com as mirabolantes histórias contadas nos butecos pelo senhor Figueiredo. Para isso, ele solicitou que se criasse um programa que dado um valor inteiro fixo e a quantidade de peixes pescados de cada espécie, seja informado a quantia mentirosa de pescados.
+Senhor Figueiredo é um pescador famoso nos botecos da cidade de Lavras por causa das histórias duvidosas que ele conta sobre as aventuras dele no Rio Grande.
+Certa vez o jovem Ceconelli, vizinho do senhor Figueiredo, resolveu investigar a veracidade dos causos.
+Depois de muita insistência de Ceconelli, o senhor Figueiredo finalmente deixou que o jovem o acompanhasse, desde que carregasse os mantimentos e sua vara de pesca.
+Durante a pesca, Ceconelli acabou descobrindo o segredo do senhor Figueiredo sobre as histórias do pescador; o senhor Figueiredo multiplica a quantia fisgada por um fator fixo!
+Dados o fator multiplicativo usado pelo senhor Figueiredo e a quantidade real de peixes pescados de cada espécie, qual será a quantidade de peixes, de cada espécie, que o velho pescador irá contar para seus amigos no bar?
 
 \section*{Entrada}
 
-A primeira linha da entrada é composta pelos inteiros $M$ e $N$, que representam, respectivamente, a quantidade de espécies pescadas e o fator usado pelo senhor Figueiredo nas histórias. Na segunda linha há $M$ inteiros $Q_i$, $i \in \{1, \ldots, M\}$, separados por espaço, que representam a quantidade real de peixes pescados por cada espécie.
+A primeira linha da entrada é composta pelos inteiros $M$ e $N$, que representam, respectivamente, a quantidade de espécies pescadas e o fator usado pelo senhor Figueiredo nas histórias.
+As próximas $M$ linhas contém um inteiro cada uma.
+Na $i$-ésima linha encontra-se o inteiro $Q_i$, representando a quantidade real de peixes pescados da espécie $i$.
 
 \section*{Saída}
 
-A saída apresenta em cada linha o valor mentiroso para cada espécie no formato "Peixe $I$: $V$", em que $I$ representa o índice da espécie e $V$ a quantidade mentirosa.
+A saída deve conter $M$ linhas.
+Na $i$-ésima linha você deve imprimir a frase "Peixe $i$: $V_i$", sem aspas, onde $V_i$ é a quantidade de peixes da espécie $i$ que o senhor Figueiredo diz ter pescado.
 
 \section*{Restrições}
 
@@ -18,40 +23,5 @@ $$1 \leq Q_i \leq 100$$
 
 
 \section*{Exemplos}
-
-Entrada
-
-3 10
-2 10 5
-
-Saída
-
-Peixe 1: 20
-Peixe 2: 100
-Peixe 3: 50
-
-
-Entrada
-
-4 100
-1 2 3 4
-
-Saída
-
-Peixe 1: 100
-Peixe 2: 200
-Peixe 3: 300
-Peixe 4: 300
-
-
-Entrada
-
-2 2
-2 2
-
-Saída
-
-Peixe 1: 4
-Peixe 2: 4
 
 \exemplo

@@ -4,8 +4,8 @@
 
 # Use samples as tests
 1     ; copy documents/sample-1.in
-1     ; copy documents/sample-2.in
-1     ; copy documents/sample-3.in
+1     ; copy attic/manual-2.in
+1     ; copy attic/manual-3.in
 
 # Use generators
 2     ; gen_random.exe 100 30
