@@ -9,4 +9,4 @@ max_n = int(sys.argv[2])
 
 n = randint(1, max_n)
 m = n + randint(1, max_n)
-print("{} {}".format(n, m))
+print("{} {}".format(m, n))

@@ -14,7 +14,8 @@ pode ser percorrida dando voltas na praça é limitada apenas pela preparação 
 Porém, pelas regras da ACM para minimizar lesões em corridas de longa distância, o circuito de corrida deve ser composto
 unicamente por segmentos de reta.
 As praças sendo consideradas pela organização possuem uma área interna, também circular, onde há um chafariz, e não é possível que o circuito
-passe por aí. A praça tem raio $A$, e a área interna do chafariz tem raio $B$. Um circuito válido é um polígono que passa apenas pela área interna
+passe por aí. O chafariz e a praça compartilham o mesmo centro.
+A praça tem raio $A$, e a área interna do chafariz tem raio $B$. Um circuito válido é um polígono que passa apenas pela área interna
 da praça externa ao chafariz, e que contém a área do chafariz.
 
 \begin{figure}[h]
@@ -31,8 +32,7 @@ válido em cada uma das praças que possivelmente serão escolhidas. Você pode 
 
 \section*{Entrada}
 
-A entrada contém apenas uma linha com dois inteiros $A$ e $B$, separados por espaço, representando os raios das circunferências interna e externa, respectivamente,
-que formam a praça.
+A entrada contém apenas uma linha com dois inteiros $A$ e $B$, separados por espaço, representando o raio da praça e da região do chafariz, respectivamente.
 
 \section*{Saída}
 
@@ -41,7 +41,7 @@ dada.
 
 \section*{Restrições}
 
-$$1 \leq A < B \leq 10^9$$
+$$1 \leq B < A \leq 10^9$$
 
 \section*{Exemplos}
 \exemplo
