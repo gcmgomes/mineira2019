@@ -19,22 +19,24 @@ Nesse caso ainda é possível inserir nas células vazias 7 peças diferentes, c
 \includegraphics[scale=0.6]{\CWD/pecas.png}
 \end{figure}
 
-Após jogarem com um tabuleiro bem pequeno, Bibika gostaria de saber, dado um tabuleiro gigante e uma configuração inicial do tabuleiro, qual solução do jogo. Como é uma tarefa bastante complexa a olho nu, cabe a você ajudá-la!
+Após jogarem com um tabuleiro bem pequeno, Bibika gostaria de saber, dado um tabuleiro gigante e uma configuração inicial do tabuleiro, qual é a solução do jogo. Como é uma tarefa bastante complexa a olho nu, cabe a você ajudá-la!
 
 \section*{Entrada}
 
-A primeira linha contém dois inteiros $N$ e $Q$, sendo $N$ o tamanho do tabuleiro quadrado e $Q$ a quantidade de células distintas que estão previamente preenchidas.
+A primeira linha contém dois inteiros $N$ e $Q$, sendo $N$ o número de linhas e colunas do tabuleiro e $Q$ a quantidade de células distintas que estão previamente preenchidas.
 As próximas $Q$ linhas possuem dois inteiros, $X_i$ e $Y_i$, indicando que a coordenada $X_i, Y_i$ do tabuleiro está preenchida.
 
 \section*{Saída}
 
-Exiba um único inteiro, a quantidade de bavios de tamanho $1 \times T$ ou $T \times 1$ que ainda são possíveis de serem colocados de forma que fiquem totalmente inseridos no tabuleiro e não exista sobreposição com outros bavios.
+A saída deve conter uma linha com um único inteiro representando a quantidade de bavios de tamanho $1 \times T$ ou $T \times 1$ que ainda são possíveis de serem colocados de forma que fiquem totalmente inseridos no tabuleiro e não exista sobreposição com outros bavios.
 
 \section*{Restrições}
 
-$1 \leq N \leq 10^6$
-$0 \leq Q \leq 10^5$
-$1 \leq X, Y \leq N$
+\begin{itemize}
+\item $1 \leq N \leq 10^6$
+\item $0 \leq Q \leq 10^5$
+\item $1 \leq X_i, Y_i \leq N$, para todo $i = 1,2,\ldots,Q$
+\end{itemize}
 
 \section*{Exemplos}
 \exemplo
