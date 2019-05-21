@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
     
 #define INF 0x3F3F3F3F
 #define DINF 1e+12
