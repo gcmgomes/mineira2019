@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 import sys,os,string
 from random import seed, randint, sample, choice, shuffle
