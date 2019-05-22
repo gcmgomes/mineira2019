@@ -7,56 +7,118 @@
 1     ; copy documents/sample-2.in
 
 # Use generators
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
-2     ; gen_random.exe 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
-3     ; gen_random.exe 500 
+3     ; gen_random.exe 20 5
+3     ; gen_random.exe 20 5
+3     ; gen_random.exe 20 1
 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
-4     ; gen_random.exe 50000 
+4     ; gen_random.exe 1000 1000
+4     ; gen_random.exe 1000 1000
+4     ; gen_random.exe 1000 1000
+4     ; gen_random.exe 1000 1000
+4     ; gen_random.exe 1000 1000
 
-5     ; gen_random.exe 500000000
-5     ; gen_random.exe 500000000
-5     ; gen_random.exe 500000000
-5     ; gen_random.exe 500000000
-5     ; gen_random.exe 500000000
-5     ; gen_random.exe 500000000
-5     ; gen_random.exe 500000000
-5     ; gen_random.exe 500000000
-5     ; gen_random.exe 500000000
-5     ; gen_random.exe 500000000
+5     ; gen_random.exe 1000 20
+5     ; gen_random.exe 1000 20
+5     ; gen_random.exe 1000 20
+5     ; gen_random.exe 1000 20
+5     ; gen_random.exe 1000 20
+5     ; gen_random.exe 1000 20
+
+6     ; gen_random.exe 100000 100000 
+6     ; gen_random.exe 100000 100000
+6     ; gen_random.exe 100000 100000
+6     ; gen_random.exe 100000 100000
+6     ; gen_random.exe 100000 100000
+
+7     ; gen_random.exe 100000 20
+7     ; gen_random.exe 100000 20
+7     ; gen_random.exe 100000 20
+7     ; gen_random.exe 100000 20
+7     ; gen_random.exe 100000 20
+7     ; gen_random.exe 100000 20
+
+8     ; gen_random.exe 1000000000 1000000000
+8     ; gen_random.exe 1000000000 1000000000
+8     ; gen_random.exe 1000000000 1000000000
+8     ; gen_random.exe 1000000000 1000000000
+
+9     ; gen_random.exe 1000000000 10
+9     ; gen_random.exe 1000000000 10
+9     ; gen_random.exe 1000000000 10
+9     ; gen_random.exe 1000000000 10
+
+10     ; gen_random.exe 1000000000 1
+10     ; gen_random.exe 1000000000 1
+10     ; gen_random.exe 1000000000 1
+10     ; gen_random.exe 1000000000 1
+10     ; gen_random.exe 1000000000 1
+10     ; copy attic/largest_answer.in
+
+# Use generators
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+2     ; gen_random.exe 20 20
+
+3     ; gen_random.exe 20 5
+3     ; gen_random.exe 20 5
+3     ; gen_random.exe 20 1
+
+4     ; gen_random.exe 1000 1000
+4     ; gen_random.exe 1000 1000
+4     ; gen_random.exe 1000 1000
+4     ; gen_random.exe 1000 1000
+4     ; gen_random.exe 1000 1000
+
+5     ; gen_random.exe 1000 20
+5     ; gen_random.exe 1000 20
+5     ; gen_random.exe 1000 20
+5     ; gen_random.exe 1000 20
+5     ; gen_random.exe 1000 20
+5     ; gen_random.exe 1000 20
+
+6     ; gen_random.exe 100000 100000 
+6     ; gen_random.exe 100000 100000
+6     ; gen_random.exe 100000 100000
+6     ; gen_random.exe 100000 100000
+6     ; gen_random.exe 100000 100000
+
+7     ; gen_random.exe 100000 20
+7     ; gen_random.exe 100000 20
+7     ; gen_random.exe 100000 20
+7     ; gen_random.exe 100000 20
+7     ; gen_random.exe 100000 20
+7     ; gen_random.exe 100000 20
+
+8     ; gen_random.exe 1000000000 1000000000
+8     ; gen_random.exe 1000000000 1000000000
+8     ; gen_random.exe 1000000000 1000000000
+8     ; gen_random.exe 1000000000 1000000000
+
+9     ; gen_random.exe 1000000000 10
+9     ; gen_random.exe 1000000000 10
+9     ; gen_random.exe 1000000000 10
+9     ; gen_random.exe 1000000000 10
+
+10     ; gen_random.exe 1000000000 1
+10     ; gen_random.exe 1000000000 1
+10     ; gen_random.exe 1000000000 1
+10     ; gen_random.exe 1000000000 1
+10     ; gen_random.exe 1000000000 1
