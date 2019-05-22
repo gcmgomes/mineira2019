@@ -42,12 +42,12 @@ bool temTodas(int x, int y, int xx, int yy){
 }
 
 int main(){
-
+        ios::sync_with_stdio(false);
 	cin >> N >> M >> T;
 	
 	rep(i, 0, N)
 	rep(j, 0, M){
-		scanf("%d", &m[i][j]);
+                cin >> m[i][j];
 		rep(k, 0, T) s[i][j][k] = 0;
 	}
 
