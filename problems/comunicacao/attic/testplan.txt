@@ -7,6 +7,7 @@
 1     ; copy documents/sample-2.in
 1     ; copy documents/sample-3.in
 1     ; copy documents/sample-4.in
+1     ; copy documents/sample-5.in
 
 # Random small cases in which it is always possible to build a valid connection
 2     ; random.exe  1 0
