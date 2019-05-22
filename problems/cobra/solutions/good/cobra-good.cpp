@@ -6,17 +6,11 @@
 
 using namespace std;
 
-int main()
-{
-    long n;
-    int i = 1;
+int main() {
+  long n = 0;
+  cin >> n;
+  n++;
+  cout << ((n % 2 ? -1 : 1) * (2 - n) + 2 + n + 2 * n * n) / 4 << endl;
 
-    while(true)
-    {
-        cin >> n;
-        if(n == 0) break;
-        cout << "Caso " << i++ << ": " << ((n%2 ? -1 : 1)*(2-n) + 2 + n + 2*n*n)/4 << endl;
-    }
-
-    return 0;
+  return 0;
 }

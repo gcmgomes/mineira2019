@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 #define MAXN 5001
@@ -22,15 +22,9 @@ int main() {
       v[i] = v[i-1]+3+(i-2)/2;
     }
   }
-
-  ll n, teste=1;
-  while(true) {
+    int n = 0;
     cin >> n;
-    if(!cin) break;
-    if(n == 0) break;
-    
-    cout << "Caso " << teste++ << ": " << v[n-1] << endl;
-  }
+    cout << v[n] << endl;
 
   return 0;
 }

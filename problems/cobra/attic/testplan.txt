@@ -8,22 +8,33 @@
 1     ; copy documents/sample-3.in
 
 # Use generators
-2     ; gen_fixed.exe 1 100
-2     ; gen_fixed.exe 4900 5000
-2     ; gen_fixed.exe 1000 1157
 
-3     ; gen_random.exe 11 10
-3     ; gen_random.exe 12 20
-3     ; gen_random.exe 5 5000
-3     ; gen_random.exe 55 1000
-3     ; gen_random.exe 100 4400
-3     ; gen_random.exe 2500 1120
+2     ; gen_fixed.exe 5
+2     ; gen_fixed.exe 6
+2     ; gen_fixed.exe 7
+2     ; gen_fixed.exe 8
+2     ; gen_fixed.exe 10
+2     ; gen_fixed.exe 500
+2     ; gen_fixed.exe 1000
+2     ; gen_fixed.exe 1500
+2     ; gen_fixed.exe 2000
+2     ; gen_fixed.exe 2500
+2     ; gen_fixed.exe 3000
+2     ; gen_fixed.exe 3500
+2     ; gen_fixed.exe 4000
+2     ; gen_fixed.exe 4500
+2     ; gen_fixed.exe 5000
 
-4     ; gen_random.exe 100 1000
-4     ; gen_random.exe 100 2000
-4     ; gen_random.exe 100 3000
-4     ; gen_random.exe 100 4000
-4     ; gen_random.exe 100 5000
-4     ; gen_random.exe 1000 5000
-4     ; gen_random.exe 1000 5000
-4     ; gen_random.exe 1000 5000
+3     ; gen_random.exe 10 20
+3     ; gen_random.exe 21 40
+3     ; gen_random.exe 41 80
+3     ; gen_random.exe 81 160
+3     ; gen_random.exe 161 320
+3     ; gen_random.exe 321 640
+4     ; gen_random.exe 641 1280
+4     ; gen_random.exe 1281 1800
+4     ; gen_random.exe 1801 2560
+4     ; gen_random.exe 2560 3000
+4     ; gen_random.exe 3001 3600
+4     ; gen_random.exe 3601 4235
+4     ; gen_random.exe 4236 5000

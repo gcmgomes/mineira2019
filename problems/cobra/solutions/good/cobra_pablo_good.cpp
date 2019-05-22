@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 #define MAXN 5010
@@ -23,14 +23,9 @@ int main() {
     }
   }
 
-  ll n, teste=1;
-  while(true) {
+    int n = 0;
     cin >> n;
-    if(!cin) break;
-    if(n == 0) break;
-    
-    cout << "Caso " << teste++ << ": " << v[n-1] << endl;
-  }
+    cout << v[n] << endl;
 
   return 0;
 }
