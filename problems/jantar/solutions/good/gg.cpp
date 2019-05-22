@@ -25,14 +25,21 @@ void PrintGood(int n, vector<int>& cycle, vector<int>& is_in_cycle) {
   cout << 1 << endl;
   cout << cycle.size() << endl;
   for (auto& x : cycle) {
-    cout << x + 1 << " ";
+    cout << x + 1;
+    if(x != cycle.back()) {
+      cout << " ";
+    }
   }
   cout << endl;
   cout << n - cycle.size() << endl;
-  int i = 0;
+  int i = 0, j = 0;
   while (i < n) {
     if (!is_in_cycle[i]) {
-      cout << i + 1 << " ";
+      j++;
+      cout << i + 1;
+      if(j < n - cycle.size()) {
+        cout << " ";
+      }
     }
     i++;
   }
