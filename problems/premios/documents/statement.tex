@@ -10,19 +10,20 @@
 
 A Maratona Mineira de Programação é um evento de muita consagração e sucesso. Há oito anos, a Maratona Mineira vem incentivando jovens estudantes a praticar programação competitiva, ajudando alunos de toda Minas Gerais a desenvolver habilidades lógicas e técnicas.
 
-Em 2012, a primeira Maratona Mineira de Programação foi realizada em Uberlândia, e os primeiros colocados receberam prêmios muito legais! A organização deu o prêmio mais caro para o primeiro lugar, o segundo mais caro para o segundo lugar e assim por diante. Porém, dinheiro não é tudo nessa vida e Gabriel Paródia sabe disso. O time dele ficou em primeiro lugar e recebeu o prêmio mais caro. Porém, para ele, o prêmio mais legal de todos foi o dado ao $K$-ésimo time mais bem colocado.
+Em 2012, a primeira Maratona Mineira de Programação foi realizada em Uberlândia, e os primeiros colocados receberam prêmios muito legais! A organização deu o prêmio mais caro para o primeiro lugar, o segundo mais caro para o segundo lugar e assim por diante. Porém, dinheiro não é tudo nessa vida e Gabriel Prosa sabe disso. O time dele ficou em primeiro lugar e recebeu o prêmio mais caro. Porém, para ele, o prêmio mais legal de todos foi o dado ao $K$-ésimo time mais bem colocado.
 
-Na Maratona de Programação temos $N$ times competindo, cada time $i$ resolveu $P_i$ problemas com uma penalidade de $T_i$ minutos. O ranking final é feito ordenando os times por ordem decrescente de problemas resolvidos, caso haja dois times com mesmo número de problemas resolvidos, o time com menor penalidade de tempo fica acima no ranking. É garantido que não temos dois times com a mesma penalidade.
+Na Maratona de Programação temos $N$ times competindo, cada time $i$ resolveu $P_i$ problemas com uma penalidade de $T_i$ minutos. O ranking final é feito ordenando os times por ordem decrescente de problemas resolvidos, caso haja dois times com mesmo número de problemas resolvidos, o time com menor penalidade de tempo fica acima no ranking. É garantido que não temos dois times com o mesmo número de problemas e com a mesma penalidade.
 
-Dado o número de problemas e a penalidade de cada time, qual será o time que ganhou o prêmio mais legal da competição, segundo Gabriel Paródia?
+Dado o número de problemas e a penalidade de cada time, qual será o time que ganhou o prêmio mais legal da competição, segundo Gabriel Prosa?
 
 
 \section*{Entrada}
-A primeira linha da entrada é composta por dois inteiros $N$ e $K$, representando o número de times que participaram da competição, e a posição do time que ganhou o prêmio mais legal, respectivamente. Logo após, teremos $N$ linhas. Cada linha é composta por três inteiros, $ID$, $P$ e $T$, representando o id do $i$-ésimo time, o número de problemas que o time resolveu, e a penalidade.
+A primeira linha da entrada é composta por dois inteiros $N$ e $K$, representando o número de times que participaram da competição, e a posição do time que ganhou o prêmio mais legal, respectivamente. Logo após, teremos $N$ linhas.
+A $i$-ésima dessas linhas é composta por três inteiros, $ID_i$, $P_i$ e $T_i$, representando o identificador único do $i$-ésimo time, o número de problemas que o time resolveu, e a penalidade.
 
 
 \section*{Saída}
-A saída deverá ser composta por somente um inteiro, o id do $K$-ésimo time mais bem colocado.
+A saída deverá ser composta por somente um inteiro, o identificador do $K$-ésimo time mais bem colocado.
 
 
 \section*{Restrições}
@@ -30,7 +31,7 @@ A saída deverá ser composta por somente um inteiro, o id do $K$-ésimo time ma
 \begin{itemize}
 \item $1 \leq N \leq 1000$
 \item $1 \leq K \leq N$
-\item $1 \leq ID \leq N$
+\item $1 \leq ID_i \leq N$
 \item $1 \leq P_i \leq 13$
 \item $1 \leq T_i \leq 2000$
 \end{itemize}

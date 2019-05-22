@@ -8,7 +8,7 @@ typedef struct sTeam {
 
   sTeam(int pid, int pp, int pt) : id(pid), p(pp), t(pt) {}
 
-  bool operator<(const sTeam& other) {
+  bool operator<(const sTeam& other) const {
     if (p == other.p) return t < other.t;
     return p > other.p;
   }
