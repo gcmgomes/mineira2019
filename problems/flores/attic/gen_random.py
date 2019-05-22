@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 # Sample test generator
 
@@ -15,7 +15,7 @@ print L, C, T
 
 TT = 2**T
 
-print("{} {}".format(L, C))
+#print("{} {}".format(L, C))
 
 for i in range(L):
 	for j in range(C):
