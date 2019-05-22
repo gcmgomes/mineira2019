@@ -204,7 +204,7 @@ int Dist(vector<vector<int>>& graph, int s, int t, vector<int>& cycle,
         int i = 0;
         parent[cycle[0]] = cycle.back();
         while (i < cycle.size()) {
-          parent[cycle[(i + 1) % n]] = cycle[i];
+          parent[cycle[(i + 1) % cycle.size()]] = cycle[i];
           i++;
         }
         return cycle_pos[s];
