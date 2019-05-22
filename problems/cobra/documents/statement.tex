@@ -1,9 +1,10 @@
 O menino Araújo, filho de biólogos, sempre foi fascinado pelas espécies de cobras que eram criadas no cativeiro da casa.
  Hoje pela manhã ele ganhou um dominó no bingo da escola e, já em casa, formulou o jogo ``A Maior Cobra Legal de Dominós''.
-Um jogo de dominó com valores de $0$ até $N$ é composto por todos os pares de inteiros $(i,j)$ que satisfazem $0 \leq i \leq j \leq N$,
-uma peça pode ser rotacionada para gerar a peça $(j, i)$, duas peças $(i,j)$ e $(k, \ell)$ se encaixam como $(i,j)(k,l)$ se e somente se $j = k$,
-uma sequência de encaixes é uma cobra se cada peça se encaixa a no máximo duas outras peças, uma em cada ponta.
-O objetivo do jogo de nosso jovem protagonista é bem simples: formar a maior cobra de dominós usando.
+
+Uma peça de dominó é um par não ordenado de inteiros $(i,j)$ tal que $0 \leq i, j \leq N$.
+Um jogo completo de dominó com $N$ valores é composto por todas as peças de dominós possíveis que tem valores entre $0$ e $N$.
+Uma cobra de dominó é uma sequência de peças $(i_1, j_1)(i_2, j_2)\dots(i_m, j_m)$ tal que $j_k = i_{k+1}$ para todo $k$ válido.
+O objetivo do jogo de nosso jovem protagonista é bem simples: formar a maior cobra de dominós possível usando peças de um jogo completo.
  Por exemplo, se seu jogo de dominó tem peças com valores de $0$ até 3, uma possível maior cobra de se formar teria 9 peças com a seguinte configuração:
 
 \begin{center}
@@ -27,17 +28,19 @@ Curioso que é, o menino Araújo solicitou a ajuda dos programadores da Maratona
 
 \section*{Entrada}
 
-A entrada consiste de um único inteiro $N$, o valor máximo que pode existir em uma peça de dominó.
+A entrada consiste de uma única linha contendo único inteiro $N$, o valor máximo que pode existir em uma peça de dominó.
 
 
 \section*{Saída}
 
-Seu programa deve imprimir um único inteiro, o tamanho da maior cobra de dominó que pode ser formada.
+A saída consiste de um único inteiro, que representa o tamanho da maior cobra de dominó que pode ser formada.
 
 
 \section*{Restrições}
 
-$$0 \leq N \leq 5000$$
+\begin{itemize}
+  \item $0 \leq N \leq 5000$
+\end{itemize}
 
 \section*{Exemplos}
 
