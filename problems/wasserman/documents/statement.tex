@@ -47,29 +47,23 @@ Wasserman então pediu para que você faça um programa que traduza o peixe-mine
 
 \section*{Entrada}
 
-A entrada contém um número inteiro $N$, seguido de $2N$ linhas com traduções de palavras
-do peixe-mineirês, no seguinte formato: a linha $i$ contém uma palavra $n_i$ de peixe-mineirês 
-e a linha abaixo ($i+1$) contém uma ou mais palavras $t_i$ correspondentes 
-a tradução.
-Por último, na linha $2N + 2$, uma 
-sentença $S$ com apenas letras minúsculas do peixe-mineirês é dada. 
+A primeira linha da entrada contém o inteiro $N$, representando o número de palavras de peixe-mineirês consideradas.
+As $2N$ linhas seguintes contém as palavras e suas traduções. A $(2i - 1)$-ésima dessas linhas contém a $i$-ésima palavra em peixe-mineirês $n_i$, enquanto a $2i$-ésima delas contém a tradução $t_i$ da palavra $n_i$. Uma tradução é uma sequência de uma ou mais palavras separadas por espaço. Em seguida, a entrada contém mais uma linha apenas com letras (sem espaços) representando a sentença $S$ a ser traduzida.
 
 \section*{Saída}
 
-Escreva a tradução, acrescentando um espaço estre as palavras traduzidas.
+A saída deve conter uma única linha com a tradução de $S$. A tradução deve ser uma sequência de palavras separadas por espaço.
 
 \section*{Restrições}
 
-$1 \le N \le 50000$
-
-$1 \le |n_i| \le 50$
-
-$1 \le |t_i| \le 100$
-
-$1 \le |S| \le 1000000$ 
-
-É garantido que toda sentença $S$ tem tradução. É também garantido
-que toda palavra de peixe-mineirês tem apenas uma tradução.
-Toda string na entrada contém apenas caracteres da tabela ASCII.
+\begin{itemize}
+\item $1 \le N \le 5 \times 10^4$.
+\item $1 \le |n_i| \le 50$ para todo $i = 1, 2, \ldots, n$.
+\item $1 \le |t_i| \le 100$ para todo $i = 1, 2, \ldots, n$.
+\item $1 \le |S| \le 10^6$.
+\item Todas as palavras $n_i$ são distintas.
+\item $S$ contem apenas letras e possuí uma tradução válida.
+\item As palavras na entrada são formadas apenas por letras a-z ou A-Z.
+\end{itemize}
 
 \exemplo
