@@ -5,8 +5,43 @@
 # Use samples as tests
 1     ; copy documents/sample-1.in
 
-# Use generators
-2     ; gen_random.exe 1 5
-2     ; gen_random.exe 5 10
-2     ; gen_random.exe 10 50
-2     ; gen_random.exe 50 100
+# Fixed test cases.
+2     ; gen_fixed.exe 1 1
+2     ; gen_fixed.exe 2 1
+2     ; gen_fixed.exe 2 2
+2     ; gen_fixed.exe 3 1
+2     ; gen_fixed.exe 3 2
+2     ; gen_fixed.exe 3 3
+2     ; gen_fixed.exe 5 3
+2     ; gen_fixed.exe 15 7
+2     ; gen_fixed.exe 20 12
+2     ; gen_fixed.exe 30 30
+2     ; gen_fixed.exe 40 40
+2     ; gen_fixed.exe 50 47
+2     ; gen_fixed.exe 75 5
+2     ; gen_fixed.exe 80 75
+2     ; gen_fixed.exe 90 50
+2     ; gen_fixed.exe 100 67
+
+# Test cases with N 100
+3     ; gen_fixed.exe 100 67
+3     ; gen_fixed.exe 100 42
+3     ; gen_fixed.exe 100 30
+3     ; gen_fixed.exe 100 10
+3     ; gen_fixed.exe 100 88
+3     ; gen_fixed.exe 100 90
+3     ; gen_fixed.exe 100 100
+
+# Random test cases
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
+4     ; gen_random.exe 1 100
