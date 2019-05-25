@@ -2,7 +2,7 @@
 
 # Sample test generator
 
-import sys,os,string,copy
+import sys,os,string,copy, re
 from random import seed, randint, sample, choice, shuffle
 
 MAXL = 50
@@ -39,6 +39,13 @@ def breakPhrase(phrase, k):
 		l -= v
 		k -= 1
 	return words
+
+def removeDoubleSpaces(phrase):
+    '''
+        Removes double spaces from a phrase.
+    '''
+    return re.sub(' +', '', phrase)
+    
 
 
 # first argument must be seed
