@@ -10,7 +10,7 @@ do
       case $answer in
          "yes")
             cd $problem
-            ../../bin/box build
+            #../../bin/box build
             ../../bin/box check
             cd -
          
