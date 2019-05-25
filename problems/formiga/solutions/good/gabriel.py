@@ -8,7 +8,7 @@ def solve_up(n, k, offset):
         if n <= 4:
             return (offset[0], offset[1] + Fraction(n, 4))
         else:
-            return (offset[0] + Fraction(n - 4, 4), offset[1] + 1)
+            return (offset[0] + Fraction(n - 4, 2), offset[1] + 1)
     else:
         mid = 6*2**(k-1)
         offset = offset if n < mid else (offset[0] + 2**(k-1), offset[1] + 2**(k-1))
